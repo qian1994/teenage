@@ -1,0 +1,23 @@
+CREATE TABLE `song` (
+    `id` int(128) AUTO_INCREMENT COMMENT '歌手唯一ID',
+    `singer` varchar(255) DEFAULT NULL COMMENT '歌手名字',
+    `song`   varchar(255) DEFAULT NULL COMMENT '歌曲',
+    `url`    varchar(255) DEFAULT NULL COMMENT '歌曲地址',
+    `liyics`   varchar(3000) DEFAULT NULL COMMENT '歌词',
+    `image`  varchar(255)  DEFAULT NULL COMMENT '歌手图片',
+    PRIMARY KEY (`id`),
+    UNIQUE  KEY  `url` (`url`)
+) ENGINE=InnoDB AUTO_INCREMENT=31253 DEFAULT CHARSET=utf8;
+
+============================================================
+
+
+CREATE TABLE `books` (
+    `id` int(128) AUTO_INCREMENT COMMENT '书籍id',
+    `name` varchar(255) DEFAULT NULL COMMENT '书籍名字',
+    `cover` varchar(255) DEFAULT NULL COMMENT '故事封面',
+    `type` varchar(255) DEFAULT NULL COMMENT '故事类型',
+    `content` varchar(3000) DEFAULT NULL COMMENT '故事内容',
+    PRIMARY KEY (`id`),
+    UNIQUE  KEY  `cover` (`cover`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

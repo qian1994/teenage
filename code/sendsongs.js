@@ -1,0 +1,16 @@
+const getSongs = require('./getSinger');
+const express = require('express');
+const app = express();
+
+app.get('/', function(req, res) {
+    const songs = getSongs((data) => {
+        res.send(data)
+    })
+});
+
+const server = app.listen(9000, function() {
+    const host = server.address().address;
+    const port = server.address().port;
+
+    console.log('Example app listening at http://%s:%s', host, port);
+});
